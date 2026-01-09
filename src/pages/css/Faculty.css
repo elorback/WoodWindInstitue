@@ -1,0 +1,56 @@
+.faculty-container {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ---------- Cards ---------- */
+.c-card {
+    min-width: 20rem;      /* Card width */
+    min-height: 20rem;      /* Only show title area */
+    display: flex;
+    align-items: center;
+    margin: 0 0 2rem 2rem;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+}
+
+/* Hover effect for the card */
+.c-card:hover {
+    transform: scale(1.5); /* Increased scale */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    z-index: 1; /* Bring hovered card to the front */
+}
+
+/* New rule for non-hovered cards when any card is hovered */
+.faculty-container:hover .c-card:not(:hover) {
+    transform: scale(0.75); /* Smaller scale for non-hovered cards */
+    opacity: 0.5; /* More transparent */
+}
+
+/* Title styling */
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+/* Media queries */
+
+@media (min-width: 465px) and (max-width: 1024px) {
+    .c-card { width: 18rem; height: 7rem;}
+    .card-title { font-size: 1.3rem; }
+}
+

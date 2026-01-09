@@ -1,0 +1,47 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(30deg, #4B3621, #333333, #FFFDD0);
+    color: #f8f9fa;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+
+header h1{
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+}
+
+
+header p {
+    color: #d1d1d1;
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+.fade-container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+

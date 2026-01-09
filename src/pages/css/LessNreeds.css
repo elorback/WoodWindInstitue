@@ -1,0 +1,22 @@
+.main{
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+} 
+
+.lessons{
+        max-width: fit-content;
+        padding: 1rem 0;
+}
+ .lesson-body{
+    max-width: fit-content;
+    font-size: 1.4rem; 
+    font-weight: 500;}
+.reeds{
+    max-width: fit-content;
+    padding: 1rem 0;
+}
+.reed-body{
+    max-width: auto;
+    font-size: 1.4rem;  
+    font-weight: 500;
+}

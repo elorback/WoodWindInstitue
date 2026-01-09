@@ -1,0 +1,47 @@
+    /* MyStory.css */
+
+    .story-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        padding-top: 2rem; 
+        padding-bottom: 4.5rem;
+    }
+    .story-container h1{
+      font-weight: 500;
+    }
+    .card {
+        display: flex;
+        flex-direction: column; /* Ensure content inside the card is stacked */
+        align-items: left; /* Center content horizontally */
+        margin: 10px 0; /* Add spacing between cards */
+    }
+
+     .story{
+      padding-top:  4.5rem;
+      font-weight: 600;
+    }
+
+    .content-card {
+        
+        background-color: rgba(255, 255, 255, 0.9); /* 10% transparent */
+        padding: 1.4rem;
+        border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+        border-radius: .5rem;
+        text-align: justify; /* Justify the text for a cleaner look */
+        max-width: 80rem;
+    }
+
+    .content-card p {
+      font-size: 1.4rem; 
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .content-card ul li {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    
+  

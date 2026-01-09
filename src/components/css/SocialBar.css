@@ -1,0 +1,23 @@
+.social-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    padding: .85rem 0; /* Adjust padding as needed */
+    z-index: 1000; /* Ensure it stays above other elements */
+    margin-top: 4rem;
+}
+
+.social-bar a {
+    margin: 0 10px; /* Space between icons/links */
+    color: #007bff; /* Adjust link color as needed */
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+.social-bar a:hover {
+    color: #0056b3; /* Adjust hover color */
+}
