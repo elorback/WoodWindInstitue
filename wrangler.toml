@@ -1,3 +1,3 @@
-name="wwia"
+name = 'woodwind-institute'
 compatibility_date="2026-1-10"
 assets={directory = "dist"}
