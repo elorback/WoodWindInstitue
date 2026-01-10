@@ -1,3 +1,9 @@
 .contact-container {
   padding-top: 4.5rem;
 }
+
+.f-name, .f-email, .f-message {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+}

@@ -15,8 +15,8 @@
 
 /* ---------- Cards ---------- */
 .c-card {
-    min-width: 20rem;      /* Card width */
-    min-height: 20rem;      /* Only show title area */
+    min-width: 10rem;      /* Card width */
+    min-height: 10rem;      /* Only show title area */
     display: flex;
     align-items: center;
     margin: 0 0 2rem 2rem;
@@ -37,13 +37,13 @@
 }
 
 .card-wrapper--hovered {
-    transform: scale(1.5);
+    transform: scale(1.25);
     opacity: 1;
     z-index: 10;
 }
 
 .card-wrapper--inactive {
-    transform: scale(0.75);
+    transform: scale(0.5);
     opacity: 0.5;
 }
 
