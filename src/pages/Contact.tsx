@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
 
     <Container className="mt-5 contact-container">
       <header className="text-center mb-4">
-        <h1 className="display-4">Contact Me</h1>
+        <h1 className="display-4 main-label">Contact Me</h1>
         <p className="lead">I would love to hear from you!</p>
       </header>
       <Form className="mx-auto" style={{ maxWidth: '40rem' }}>

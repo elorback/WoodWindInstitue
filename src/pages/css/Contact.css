@@ -7,3 +7,13 @@
   font-weight: 500;
   font-size: 1.2rem;
 }
+.main-label{
+font-size: 3rem !important;
+font-weight: 600 !important;
+
+}
+.lead{
+  color: white;
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+}
