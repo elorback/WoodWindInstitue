@@ -8,7 +8,7 @@
 
 .carousel {
     width: 100%;
-    max-width: 75rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -23,20 +23,28 @@
     justify-content: center;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+    transition: box-shadow 0.3s ease; /* Keep box-shadow transition */
 }
 
-/* Hover effect for the card */
 .c-card:hover {
-    transform: scale(1.5); /* Increased scale */
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     z-index: 1; /* Bring hovered card to the front */
 }
 
-/* New rule for non-hovered cards when any card is hovered */
-.faculty-container:hover .c-card:not(:hover) {
-    transform: scale(0.75); /* Smaller scale for non-hovered cards */
-    opacity: 0.5; /* More transparent */
+/* Card wrapper states */
+.card-wrapper {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-wrapper--hovered {
+    transform: scale(1.5);
+    opacity: 1;
+    z-index: 10;
+}
+
+.card-wrapper--inactive {
+    transform: scale(0.75);
+    opacity: 0.5;
 }
 
 /* Title styling */

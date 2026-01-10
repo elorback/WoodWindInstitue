@@ -22,6 +22,7 @@ const Faculty: React.FC = () => {
     // Modal state
     const [selectedMember, setSelectedMember] = useState<FacultyMember | null>(null);
     const [showModal, setShowModal] = useState(false);
+    const [hoveredId, setHoveredId] = useState<number | null>(null);
 
     const handleOpenModal = (member: FacultyMember) => {
         setSelectedMember(member);
@@ -46,7 +47,7 @@ const Faculty: React.FC = () => {
                     draggable
                     swipeable
                     keyBoardControl
-                    centerMode
+                    centerMode={false}
                     responsive={{
                         desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
                         tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
@@ -54,7 +55,14 @@ const Faculty: React.FC = () => {
                     }}
                 >
                     {faculty.map(mem => (
-                        <div key={mem.id} onClick={() => handleOpenModal(mem)} style={{ cursor: 'pointer' }}>
+                        <div
+                            key={mem.id}
+                            className={`card-wrapper ${hoveredId === mem.id ? 'card-wrapper--hovered' : ''} ${hoveredId !== null && hoveredId !== mem.id ? 'card-wrapper--inactive' : ''}`}
+                            onClick={() => handleOpenModal(mem)}
+                            onMouseEnter={() => setHoveredId(mem.id)}
+                            onMouseLeave={() => setHoveredId(null)}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <Card className="c-card">
                                 <Card.Header className="card-title text-center">{mem.title}</Card.Header>
                             </Card>
