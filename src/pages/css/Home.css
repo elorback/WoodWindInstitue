@@ -1,3 +1,21 @@
 .home-container {
 padding-top: 5rem; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card-container{
+    min-height: 30rem;
+    width: 20rem;
+}
+.c-body{
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-title{
+    margin: 1rem 0;
+    padding: 1rem 0;
 }
