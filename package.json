@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy":"npm run build && wrangler deploy",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -19,8 +20,7 @@
     "react-dom": "^19.2.0",
     "react-fontawesome": "^1.7.1",
     "react-multi-carousel": "^2.8.5",
-    "react-router-dom": "^7.12.0",
-    "wrangler": "^4.58.0"
+    "react-router-dom": "^7.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
