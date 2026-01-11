@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "deploy": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.4.1",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
     "bootstrap": "^5.3.8",
@@ -23,6 +24,7 @@
     "react-router-dom": "^7.12.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260111.0",
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",

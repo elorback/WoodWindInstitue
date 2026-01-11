@@ -3,7 +3,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    include: ['bootstrap/dist/css/bootstrap.min.css'],
+  build: {
+    outDir: 'dist', // ensure build output goes to 'dist' for Cloudflare Pages
+  },
+  resolve: {
+    alias: {
+      // Optional: aliases if needed
+      '@': '/src',
+    },
   },
 });
