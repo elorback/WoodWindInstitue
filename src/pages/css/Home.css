@@ -1,20 +1,29 @@
 /* Hero Section */
 .hero-section {
-    min-height: 100vh; /* full viewport height */
-    display: flex;
+margin-top: 10rem;  
+  display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/hero-bg.jpg') no-repeat center center;
     background-size: cover;
     padding: 0 2rem;
-    text-align: left;
     color: #fff;
 }
 
-.hero-text {
-    max-width: 600px;
+/* Hero Row: text + image side by side */
+.hero-container > .row {
+    display: flex;
+    flex-wrap: nowrap; /* prevent wrapping on desktop */
+    align-items: center; /* vertically center */
 }
 
+/* Text Column */
+.hero-text {
+    max-width: 600px;
+    z-index: 2; /* keep text above background images */
+}
+
+/* Title & Subtitle */
 .hero-title {
     font-size: 3rem;
     font-weight: 900;
@@ -27,14 +36,64 @@
     margin-bottom: 2rem;
 }
 
+/* Buttons */
 .hero-buttons .btn {
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem; /* for smaller screens */
 }
 
-.hero-image img {
-    max-width: 100%;
+/* Image Column */
+.hero-image {
+    position: relative;
+    flex: 1; /* take remaining space next to text */
+    height: 400px; /* adjust height as needed */
+    margin-left: 2rem; /* spacing between text and image */
+}
+
+/* Rotating photos */
+.hero-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* fill hero-image column */
+    object-fit: cover; /* make sure image covers column nicely */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-photo.visible {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-photo.hidden {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-container > .row {
+        flex-direction: column; /* stack text and image on tablet/mobile */
+    }
+
+    .hero-image {
+        margin-left: 0;
+        margin-top: 2rem;
+        height: 300px;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
 }

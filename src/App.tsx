@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Workshop from "./pages/Workshop";
 import Contact from "./pages/Contact";
-import MyStory from "./pages/MyStory";
+import Mission from "./pages/Missionstatement";
 import Faculty from "./pages/Faculty";
 import LessNreed from "./pages/LessonsNreeds";
 import TopNavBar from "./components/TopNavBar";
@@ -51,7 +51,7 @@ const App: React.FC = () => {
         <Routes location={displayLocation}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Workshop />} />
-          <Route path="/mystory" element={<MyStory />} />
+          <Route path="/mission" element={<Mission />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/lessons-and-reeds" element={<LessNreed />} />
           <Route path="/contact" element={<Contact />} />
