@@ -1,19 +1,22 @@
 .custom-nav-link {
     width: auto;
     display: inline-block;
-    padding: 0.625rem 1.25rem; /* Adjust padding as needed */
-    margin: 0.3125rem; /* Add spacing between Nav.Links */
-    color: white !important; /* Ensure text color is white */
-    font-size: 1.5rem; /* Adjust font size for larger text */
-    background-color: transparent; /* Ensure background is transparent */
-    border: none; /* Remove border */
-    cursor: pointer; /* Change cursor to pointer for better UX */
-    text-decoration: none; /* Remove underline from links */
+    padding: 0.625rem 1.25rem;
+    margin: 0.3125rem 1rem;
+    color: white !important;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .custom-nav-link:hover {
-    color: darkgoldenrod !important; /* Change text color to yellow on hover */
+    color: darkgoldenrod !important;
+    transition: transform 0.2s ease-in, color 0.2s ease-out;
+    transform: scale(1.25); /* Increase size by 10% */
 }
+
 
 .navbar-fixed {
     position: fixed !important; /* Fix the navbar at the top */

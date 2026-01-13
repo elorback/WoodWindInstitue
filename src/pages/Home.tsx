@@ -48,7 +48,6 @@ const HeroSection: React.FC = () => {
                         </p>
                         <div className="hero-buttons">
                             <Button
-                                variant="primary"
                                 className="me-3"
                                 onClick={handleNavigation}
                                 value="/contact"

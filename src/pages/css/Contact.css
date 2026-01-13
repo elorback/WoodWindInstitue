@@ -1,19 +1,69 @@
+/* Layout */
 .contact-container {
   padding-top: 4.5rem;
 }
 
-.f-name, .f-email, .f-message {
+/* Header */
+.contact-header {
+  color: white;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* Form */
+.contact-form {
+  max-width: 40rem;
+}
+
+/* Labels */
+.contact-form label {
   color: white;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
-.main-label{
-font-size: 3rem !important;
-font-weight: 600 !important;
 
-}
-.lead{
+/* Inputs & textarea */
+.contact-form .form-control {
+  background-color: #1f1f1f;
   color: white;
-  font-weight: 500 !important;
-  font-size: 1.2rem !important;
+  border: 1px solid #ccc;
+}
+
+.contact-form .form-control::placeholder {
+  color: #bbb;
+}
+
+.contact-form .form-control:focus {
+  background-color: #1f1f1f;
+  color: white;
+  border-color: #d4a94f;
+  box-shadow: none;
+}
+
+/* Button */
+.contact-form .contact-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #4b2e1e;
+  color: #f8f9fa;
+  border: none;
+
+  /* transition */
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+.contact-form .contact-btn:hover {
+  background-color: #d4a94f;
+  color: black;
+  transform: scale(1.1);
 }

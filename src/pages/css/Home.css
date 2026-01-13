@@ -4,7 +4,7 @@ margin-top: 7rem;
   display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(30deg, #d4a94f, #4b2e1e, #c8b26B);
+    background: inherit;  
     background-size: cover;
     padding: 0 2rem;
     color: #fff;
@@ -43,6 +43,18 @@ margin-top: 7rem;
     font-size: 1.1rem;
     margin-right: 1rem;
     margin-bottom: 1rem; /* for smaller screens */
+    background-color: #4b2e1e;
+  color: #f8f9fa;
+  border: none;
+    transition: all 0.3s ease;
+
+}.hero-buttons .btn:hover {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem; /* for smaller screens */
+      background-color: #d4a94f;
+  color: black;
 }
 
 /* Image Column */
