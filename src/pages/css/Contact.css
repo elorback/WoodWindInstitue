@@ -35,7 +35,7 @@
 .contact-form .form-control {
   background-color: #1f1f1f;
   color: white;
-  border: 1px solid #ccc;
+  border: none;
 }
 
 .contact-form .form-control::placeholder {
@@ -45,6 +45,7 @@
 .contact-form .form-control:focus {
   background-color: #1f1f1f;
   color: white;
+  border: 1px solid;
   border-color: #d4a94f;
   box-shadow: none;
 }
@@ -58,7 +59,9 @@
   border: none;
 
   /* transition */
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, 
+              color 0.2s ease;
+
   transform: scale(1);
 }
 
