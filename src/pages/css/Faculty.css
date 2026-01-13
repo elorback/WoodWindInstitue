@@ -7,7 +7,11 @@
     align-items: center;
     color: inherit; /* inherit global text color */
 }
-
+.faculty-title{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
 /* ---------- Carousel ---------- */
 .carousel {
     width: 100%;

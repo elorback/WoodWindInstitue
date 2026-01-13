@@ -3,8 +3,8 @@ import { Container, Card, Modal, Button } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './css/Faculty.css';
-import Andrea_headshot from "/photos/andrea_headsthot.png";
-import Julie from "/photos/Julie-Popplewell-Headshot-300x300.webp";
+import Andrea_headshot from "/photos/Andrea.jpg";
+import Julie from "/photos/julie.jpg";
 import Mariana from "/photos/Mariana.png"
 import Matt from "/photos/Matthew.png";
 
@@ -40,7 +40,7 @@ const Faculty: React.FC = () => {
     return (
         <Container className="mt-5 faculty-container">
             <header className="text-center mb-4">
-                <h1 className="display-4">Faculty</h1>
+                <h1 className="faculty-title">Faculty</h1>
             </header>
 
             <div className="carousel">
