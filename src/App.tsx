@@ -5,7 +5,7 @@ import Programs from "./pages/Programs";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Faculty from "./pages/Faculty";
-import LessNreed from "./pages/LessonsNreeds";
+import Testimonials from "./pages/Testimonials";
 import TopNavBar from "./components/TopNavBar";
 import Socialbar from "./components/Socialbar";
 import "./index.css";
@@ -53,7 +53,7 @@ const App: React.FC = () => {
           <Route path="/programs" element={<Programs />} />
           <Route path="/about" element={<About />} />
           <Route path="/faculty" element={<Faculty />} />
-          <Route path="/lessons-and-reeds" element={<LessNreed />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

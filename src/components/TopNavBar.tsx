@@ -21,8 +21,8 @@ const TopNavBar: React.FC = () => {
           <Nav.Link as={Link} to="/programs" className="custom-nav-link">
             Programs
           </Nav.Link>
-          <Nav.Link as={Link} to="/lessons-and-reeds" className="custom-nav-link">
-            Lessons and Reeds
+          <Nav.Link as={Link} to="/testimonials" className="custom-nav-link">
+            Testimonials
           </Nav.Link>
           <Nav.Link as={Link} to="/contact" className="custom-nav-link">
             Contact

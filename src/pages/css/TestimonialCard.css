@@ -1,0 +1,108 @@
+/* =========================
+   Card Layout
+========================= */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 350px; /* consistent height for all cards */
+  background-color: rgba(30, 30, 30, 0.9); /* dark, subtle uniform background */
+  border: none; /* remove border, let shadow define edges */
+  border-radius: 1rem;
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   Card Body
+========================= */
+.testimonial-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #f1f1f1; /* text color for dark background */
+  padding: 2rem;
+}
+
+/* Content Group */
+.testimonial-content {
+  flex-grow: 1;
+}
+
+/* =========================
+   Quote Styling
+========================= */
+.quote-mark {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #d4a94f;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Testimonial Text
+========================= */
+.testimonial-text {
+  white-space: pre-line;
+  margin-bottom: 0.75rem;
+  color: black; /* slightly lighter text for readability */
+}
+
+/* =========================
+   Read More Button
+========================= */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #6e5b30;
+  font-weight: 600;
+  padding: 0;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.read-more-btn:hover {
+  color: #f1c75b;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* =========================
+   Name / Attribution
+========================= */
+.testimonial-name {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: right;
+  color: black;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .testimonial-body {
+    font-size: 1.05rem;
+    padding: 1.5rem;
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+}
