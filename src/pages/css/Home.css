@@ -1,21 +1,40 @@
-.home-container {
-padding-top: 5rem; 
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.card-container{
-    min-height: 30rem;
-    width: 20rem;
-}
-.c-body{
-    font-size: 2rem;
-    font-weight: 600;
+/* Hero Section */
+.hero-section {
+    min-height: 100vh; /* full viewport height */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 0 2rem;
+    text-align: left;
+    color: #fff;
 }
-.c-title{
-    margin: 1rem 0;
-    padding: 1rem 0;
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
