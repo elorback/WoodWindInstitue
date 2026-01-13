@@ -12,14 +12,14 @@ const TopNavBar: React.FC = () => {
           <Nav.Link as={Link} to="/" className="custom-nav-link">
             Home
           </Nav.Link>
-          <Nav.Link as={Link} to="/mission" className="custom-nav-link">
+          <Nav.Link as={Link} to="/about" className="custom-nav-link">
             About
           </Nav.Link>
           <Nav.Link as={Link} to="/faculty" className="custom-nav-link">
             Faculty
           </Nav.Link>
-          <Nav.Link as={Link} to="/about" className="custom-nav-link">
-            Bassoon Workshop
+          <Nav.Link as={Link} to="/programs" className="custom-nav-link">
+            Programs
           </Nav.Link>
           <Nav.Link as={Link} to="/lessons-and-reeds" className="custom-nav-link">
             Lessons and Reeds

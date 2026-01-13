@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
                             <Button
                                 variant="outline-light"
                                 onClick={handleNavigation}
-                                value="/mystory"
+                                value="/mission"
                             >
                                 Learn More
                             </Button>
