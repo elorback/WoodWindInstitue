@@ -1,11 +1,14 @@
+/* ---------- Faculty Container ---------- */
 .faculty-container {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: inherit; /* inherit global text color */
 }
 
+/* ---------- Carousel ---------- */
 .carousel {
     width: 100%;
     max-width: 80rem;
@@ -15,50 +18,135 @@
 
 /* ---------- Cards ---------- */
 .c-card {
-    min-width: 10rem;      /* Card width */
-    min-height: 10rem;      /* Only show title area */
+    min-width: 10rem;          /* Card width */
+    min-height: 10rem;         /* Minimum card height */
     display: flex;
+    flex-direction: column;     /* Stack image and text vertically */
     align-items: center;
+    justify-content: flex-start;
     margin: 0 0 2rem 2rem;
-    justify-content: center;
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease; /* Keep box-shadow transition */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 0.75rem;
+    overflow: hidden;
 }
 
 .c-card:hover {
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    z-index: 1; /* Bring hovered card to the front */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    transform: scale(1.05);
 }
 
-/* Card wrapper states */
+.c-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem 0;
+    color: #ffeaa7; /* light gold for title */
+}
+
+.card-instrument {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f8f9fa;
+}
+
+/* ---------- Modal ---------- */
+.modal-content {
+    background-color: rgba(0,0,0,0.8);
+    color: #f8f9fa;
+    border: none;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+/* Modal Title Wrapper (Name left, Instrument right) */
+.modal-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black; /* light gold */
+}
+
+.modal-title-wrapper .name {
+    text-align: left;
+}
+
+.modal-title-wrapper .instrument {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+    padding-right: 2rem;
+}
+
+/* Modal Body */
+.modal-body {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Modal Footer */
+.modal-footer {
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #4b2e1e;
+    color: #f8f9fa;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #d4a94f;
+    color: #4b2e1e;
+}
+
+/* ---------- Card Wrapper Hover States ---------- */
 .card-wrapper {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card-wrapper--hovered {
-    transform: scale(1.25);
+    transform: scale(1.1);
     opacity: 1;
     z-index: 10;
 }
 
 .card-wrapper--inactive {
-    transform: scale(0.5);
-    opacity: 0.5;
+    transform: scale(0.9);
+    opacity: 0.6;
 }
 
-/* Title styling */
-.card-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 0;
-}
-
-/* Media queries */
-
+/* ---------- Media Queries ---------- */
 @media (min-width: 465px) and (max-width: 1024px) {
-    .c-card { width: 18rem; height: 7rem;}
+    .c-card { 
+        width: 18rem; 
+        height: auto;
+    }
     .card-title { font-size: 1.3rem; }
 }
 
+@media (max-width: 992px) {
+    .carousel {
+        padding: 1rem;
+    }
+}

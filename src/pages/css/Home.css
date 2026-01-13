@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-section {
-margin-top: 10rem;  
+margin-top: 7rem;  
   display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +49,7 @@ margin-top: 10rem;
 .hero-image {
     position: relative;
     flex: 1; /* take remaining space next to text */
-    height: 400px; /* adjust height as needed */
+    height: 35rem; /* adjust height as needed */
     margin-left: 2rem; /* spacing between text and image */
 }
 
@@ -59,7 +59,7 @@ margin-top: 10rem;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* fill hero-image column */
+    height: 90%; /* fill hero-image column */
     object-fit: cover; /* make sure image covers column nicely */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
