@@ -8,6 +8,7 @@ import Faculty from "./pages/Faculty";
 import Testimonials from "./pages/Testimonials";
 import TopNavBar from "./components/TopNavBar";
 import Socialbar from "./components/Socialbar";
+import { NavbarProvider } from "./components/NavbarContext";
 import "./index.css";
 
 
@@ -46,18 +47,22 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <TopNavBar />
-      <div className={`fade-container ${fadeClass}`}>
-        <Routes location={displayLocation}>
-          <Route path="/" element={<Home />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-      <Socialbar />
+      <NavbarProvider>
+
+        <TopNavBar />
+        <div className={`fade-container ${fadeClass}`}>
+          <Routes location={displayLocation}>
+            <Route path="/" element={<Home />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faculty" element={<Faculty />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Socialbar />
+      </NavbarProvider>
+
     </div>
   );
 };

@@ -57,11 +57,9 @@
   background-color: #4b2e1e;
   color: #f8f9fa;
   border: none;
-
   /* transition */
   transition: transform 0.2s ease-in-out, 
               color 0.2s ease;
-
   transform: scale(1);
 }
 

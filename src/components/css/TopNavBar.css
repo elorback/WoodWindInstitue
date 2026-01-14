@@ -1,28 +1,86 @@
-.custom-nav-link {
-    width: auto;
+  /* ============================= */
+  /* Nav Links */
+  .custom-nav-link {
     display: inline-block;
     padding: 0.625rem 1.25rem;
     margin: 0.3125rem 1rem;
     color: white !important;
     font-size: 1.5rem;
-    background-color: transparent;
+    background: transparent;
     border: none;
     cursor: pointer;
     text-decoration: none;
-}
-
-.custom-nav-link:hover {
-    color: darkgoldenrod !important;
     transition: transform 0.2s ease-in, color 0.2s ease-out;
-    transform: scale(1.25); /* Increase size by 10% */
-}
+  }
 
+  .custom-nav-link:hover {
+    color: darkgoldenrod !important;
+    transform: scale(1.25);
+  }
 
-.navbar-fixed {
-    position: fixed !important; /* Fix the navbar at the top */
+  /* ============================= */
+  /* Navbar Fixed + Morphing */
+  .navbar-fixed {
+    position: fixed !important;
     top: 0 !important;
-    width: 100%; /* Ensure it spans the full width */
-    z-index: 1000; /* Ensure it stays above other elements */
+    left: 0;        /* Collapse to LEFT */
+    right: auto;
+    width: 100%;
+    z-index: 1000;
     font-size: x-large;
     font-weight: 600;
+  }
+
+  .morph-navbar {
+    overflow: hidden;
+    transition: width 0.4s ease;
+  }
+
+  .morph-navbar.closed {
+    width: 64px !important; /* compact box */
+  }
+
+  .morph-navbar.open {
+    width: 100% !important; /* full bar */
+  }
+
+  /* Fade nav links when collapsed */
+  .morph-navbar.closed .navbar-collapse {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .morph-navbar.open .navbar-collapse {
+    opacity: 1;
+    transition: opacity 0.25s ease 0.15s;
+  }
+
+  /* ============================= */
+.morph-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    background-color: transparent !important;
+    border: none !important;
+    color: white !important; /* Add !important to override Bootstrap */
+    cursor: pointer;
+    z-index: 1100;
+    transition: all 0.3s ease, color 0.3s ease;
+    transform: scale(1);
 }
+
+.morph-toggle:hover {
+    background-color: inherit; /* light hover background */
+    color: darkgoldenrod !important;
+    transform: scale(1.5);
+}
+
+
+  /* Center toggle when collapsed */
+  .morph-navbar.closed .morph-toggle {
+    margin-left: auto;
+    margin-right: auto;
+  }
