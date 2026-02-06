@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import './css/Contact.css';
+import { Modal } from 'react-bootstrap';
 
 const Contact: React.FC = () => {
   interface ContactForm {
@@ -11,6 +12,8 @@ const Contact: React.FC = () => {
     message: string
   }
 
+  const [modalMessage, setModalMessage] = useState("");
+  const [isVisible, setIsVisible] = useState(false)
   const [form, setForm] = useState<ContactForm>({
     name: '',
     email: '',
@@ -36,10 +39,13 @@ const Contact: React.FC = () => {
 
     fetch("https://formspree.io/f/mzdapyka", { method: "POST", body: data, headers: { "Accept": "application/json" } }).then(res => {
       if (res.ok) {
-        alert("SENT MESSAGE!");
         setForm({ name: '', email: '', phone: '', message: '' })
+        setIsVisible(true)
+        setModalMessage("Email Sent Sucessfully!")
       } else {
-        alert("Failed to send...")
+        setIsVisible(true)
+        setModalMessage("Email Failed to Send!")
+
       }
 
     }).catch(er => { console.log(er) })
@@ -87,6 +93,16 @@ const Contact: React.FC = () => {
           Send Message
         </Button>
       </Form>
+      <Modal show={isVisible} onHide={() => setIsVisible(false)} centered>
+        <Modal.Header closeButton style={{ borderBottom: 'none' }}>
+          <Modal.Title style={{ color: 'white' }}>Contact Form</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {modalMessage}
+        </Modal.Body>
+
+
+      </Modal>
 
     </Container>
   );
