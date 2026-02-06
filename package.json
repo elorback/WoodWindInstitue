@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.4.1",
+    "@formspree/react": "^3.0.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
     "bootstrap": "^5.3.8",
