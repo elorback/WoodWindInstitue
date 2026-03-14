@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
 
             {/* Students */}
             <section className="mb-5">
-                <h2 className="section-title text-center mb-4">Students</h2>
+                <h2 className="section-title text-center mb-4">Professional Testamonials</h2>
                 <Row className="g-4">
                     {testimonials
                         .filter(t => t.role === "Student")
