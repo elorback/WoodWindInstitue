@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
 
             {/* Students */}
             <section className="mb-5">
-                <h2 className="section-title text-center mb-4">Professional Testamonials</h2>
+                <h2 className="section-title text-center mb-4">Students</h2>
                 <Row className="g-4">
                     {testimonials
                         .filter(t => t.role === "Student")
@@ -25,9 +25,9 @@ const Testimonials: React.FC = () => {
                 </Row>
             </section>
 
-            {/* Faculty */}
+            {/* Professional Testimonials */}
             <section>
-                <h2 className="section-title text-center mb-4">Faculty & Mentors</h2>
+                <h2 className="section-title text-center mb-4">Professional Testimonials</h2>
                 <Row className="g-4">
                     {testimonials
                         .filter(t => t.role === "Faculty")
