@@ -141,10 +141,11 @@
 }
 
 /* ---------- Media Queries ---------- */
-@media (min-width: 465px) and (max-width: 1024px) {
+@media (min-width: 480px) {
     .c-card { 
         width: 18rem; 
         height: auto;
+        gap:0 clamp(1rem, 2rem,3rem);
     }
     .card-title { font-size: 1.3rem; }
 }

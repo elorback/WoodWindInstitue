@@ -1,23 +1,41 @@
-.social-bar {
+.socialbar {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height:4rem;
     background-color: #f8f9fa; /* Adjust background color as needed */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
     display: flex;
     justify-content: center; /* Center the content horizontally */
-    padding: .85rem 0; /* Adjust padding as needed */
+    padding: 1rem; /* Adjust padding as needed */
     z-index: 1000; /* Ensure it stays above other elements */
     margin-top: 4rem;
 }
 
-.social-bar a {
+.socialbar a {
     margin: 0 10px; /* Space between icons/links */
     color: #007bff; /* Adjust link color as needed */
     text-decoration: none;
     font-size: 1.2rem; /* Adjust icon size */
 }
 
-.social-bar a:hover {
+.socialbar a:hover {
     color: #0056b3; /* Adjust hover color */
+}
+@media (max-width:465px){
+    .socialbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:3rem;
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    padding: 2rem; /* Adjust padding as needed */
+    z-index: 1000; /* Ensure it stays above other elements */
+    margin-top: 4rem;
+}
+
+
 }
